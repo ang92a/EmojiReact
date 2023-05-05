@@ -1,0 +1,16 @@
+.main {
+    padding: 80px 0 50px 0;
+    min-height: calc(100vh - 376px);
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    gap: 22px 19px;
+    grid-template-columns: repeat(3, 316px);
+    justify-content: center
+}

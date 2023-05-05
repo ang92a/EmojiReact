@@ -1,0 +1,18 @@
+.btn {
+    width: 38px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #DEE2E6;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #055160;
+}
+
+.btn:hover {
+    background: #055160;
+    color: #FFFFFF;
+}
+
