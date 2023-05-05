@@ -1,14 +1,27 @@
 import style from "./Footer.module.css";
 import { Button } from "../Button/Button";
 
-export const Footer = ({ setPerPage, perPage, arr, btn, children }) => {
+export const Footer = ({
+  setPerPage,
+  perPage,
+  arr,
+  btn,
+  children,
+  firstButtonIndex,
+  lastButtonIndex
+}) => {
   return (
     <>
       <footer className={style.footer}>
         <div className={style.underline}></div>
         <div className={style.container}>
           <div className="btns">
-            <Button arr={arr} btn={btn}>
+            <Button
+              arr={arr}
+              btn={btn}
+              firstButtonIndex={firstButtonIndex}
+              lastButtonIndex={lastButtonIndex}
+            >
               {children}
             </Button>
           </div>

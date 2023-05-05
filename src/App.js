@@ -60,6 +60,27 @@ function App() {
   const Iend = currentNumber * perPage;
   const Istr = currentNumber * perPage - perPage;
 
+  // логика для отображения пагинации
+  let firstButtonIndex;
+  let lastButtonIndex;
+
+  switch (true) {
+    case currentNumber <= 3: {
+      firstButtonIndex = 0;
+      lastButtonIndex = 5;
+      break;
+    }
+    case currentNumber > arrLenght - 2: {
+      firstButtonIndex = arrLenght - 4;
+      lastButtonIndex = arrLenght - 1;
+      break;
+    }
+    default: {
+      firstButtonIndex = currentNumber - 3;
+      lastButtonIndex = currentNumber + 2;
+    }
+  }
+
   return (
     <>
       <Header />
@@ -68,7 +89,7 @@ function App() {
         type="text"
         value={inputValue}
         onChange={(evt) => {
-          inputHandler(evt)
+          inputHandler(evt);
           numberHandler(1);
         }}
       />
@@ -80,6 +101,8 @@ function App() {
         perPage={perPage}
         arr={Arrey}
         btn={numberHandler}
+        firstButtonIndex={firstButtonIndex}
+        lastButtonIndex={lastButtonIndex}
       />
     </>
   );
