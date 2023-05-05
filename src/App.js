@@ -51,7 +51,7 @@ function App() {
     .fill()
     .map((e, i) => i + 1);
 
-  // состояние на кнопки, для отрисовки
+  // состояние на кнопки, для отрисовки кнопок
   const [currentNumber, setCurrentNumber] = useState(1);
 
   const numberHandler = (num) => setCurrentNumber(num);
@@ -67,15 +67,13 @@ function App() {
         className="input"
         type="text"
         value={inputValue}
-        onChange={inputHandler}
+        onChange={(evt) => {
+          inputHandler(evt)
+          numberHandler(1);
+        }}
       />
 
-      <Main
-        arr={filteredData}
-        Istr={Istr}
-        Iend={Iend}
-        inputCurrentValue={inputCurrentValue}
-      />
+      <Main arr={filteredData} Istr={Istr} Iend={Iend} />
 
       <Footer
         setPerPage={setPerPage}

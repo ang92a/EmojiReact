@@ -15,7 +15,10 @@ export const Footer = ({ setPerPage, perPage, arr, btn, children }) => {
           <div className={style.PerPage}>
             <label className={style.text}>Per page</label>
             <select
-              onChange={(evt) => setPerPage(evt.target.value)}
+              onChange={(evt) => {
+                setPerPage(evt.target.value);
+                btn(1);
+              }}
               id={style.select}
             >
               <option value={12}>12</option>
