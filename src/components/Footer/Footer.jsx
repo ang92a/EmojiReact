@@ -8,7 +8,9 @@ export const Footer = ({
   btn,
   children,
   firstButtonIndex,
-  lastButtonIndex
+  lastButtonIndex,
+  currentNumber,
+  setCurrentNumber
 }) => {
   return (
     <>
@@ -21,6 +23,8 @@ export const Footer = ({
               btn={btn}
               firstButtonIndex={firstButtonIndex}
               lastButtonIndex={lastButtonIndex}
+              currentNumber={currentNumber}
+              setCurrentNumber={setCurrentNumber}
             >
               {children}
             </Button>

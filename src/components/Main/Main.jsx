@@ -2,7 +2,6 @@ import style from "./Main.module.css";
 import { Card } from "../Card/Card";
 
 export const Main = ({ arr, Istr, Iend }) => {
-  console.log(arr);
 
   return (
     <main className={style.main}>

@@ -60,6 +60,7 @@ function App() {
   const Iend = currentNumber * perPage;
   const Istr = currentNumber * perPage - perPage;
 
+  // console.log(currentNumber);
   // логика для отображения пагинации
   let firstButtonIndex;
   let lastButtonIndex;
@@ -70,9 +71,9 @@ function App() {
       lastButtonIndex = 5;
       break;
     }
-    case currentNumber > arrLenght - 2: {
-      firstButtonIndex = arrLenght - 4;
-      lastButtonIndex = arrLenght - 1;
+    case currentNumber > allPage - 2: {
+      firstButtonIndex = allPage - 4;
+      lastButtonIndex = allPage - 1;
       break;
     }
     default: {
@@ -103,6 +104,8 @@ function App() {
         btn={numberHandler}
         firstButtonIndex={firstButtonIndex}
         lastButtonIndex={lastButtonIndex}
+        currentNumber={currentNumber}
+        setCurrentNumber={setCurrentNumber}
       />
     </>
   );
