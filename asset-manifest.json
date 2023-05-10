@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/EmojiReact/static/css/main.1647a833.css",
+    "main.js": "/EmojiReact/static/js/main.7b4a97c3.js",
+    "index.html": "/EmojiReact/index.html",
+    "main.1647a833.css.map": "/EmojiReact/static/css/main.1647a833.css.map",
+    "main.7b4a97c3.js.map": "/EmojiReact/static/js/main.7b4a97c3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1647a833.css",
+    "static/js/main.7b4a97c3.js"
+  ]
+}
