@@ -20,7 +20,11 @@ export const Button = ({
       </button>
       <button
         className="btn"
-        onClick={() => setCurrentNumber(currentNumber - 1)}
+        onClick={() =>
+          setCurrentNumber(
+            currentNumber !== 1 ? currentNumber - 1 : currentNumber
+          )
+        }
       >
         &#60;
       </button>
