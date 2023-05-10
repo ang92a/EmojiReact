@@ -41,7 +41,13 @@ export const Button = ({
       ))}
       <button
         className="btn"
-        onClick={() => setCurrentNumber(currentNumber + 1)}
+        onClick={() =>
+          setCurrentNumber(
+            currentNumber !== arr.length - 1
+              ? currentNumber + 1
+              : arr.length - 1
+          )
+        }
       >
         &#62;
       </button>
